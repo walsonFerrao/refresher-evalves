@@ -1,17 +1,13 @@
 {
-  "country": [],
-  "city": [
+  "country": [
     {
-      "country": "india",
-      "city": "mangalore",
-      "population": "185555",
+      "country": "India",
       "id": 1
     },
     {
-      "country": "nepal",
-      "city": "lop",
-      "population": "5494",
+      "country": "Pakistan",
       "id": 2
     }
-  ]
+  ],
+  "city": []
 }

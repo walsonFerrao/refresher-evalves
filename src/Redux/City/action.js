@@ -41,10 +41,27 @@ export const get_city_api=()=>(dispatch)=>{
 axios.get("http://localhost:1080/city")
 .then((res)=>{console.log(res.data);dispatch(get_city(res.data))})
 .catch((err)=>{console.log(err)})
-  
+  }
 
 
 
+  export const patch_the_city=({id,payload})=>(dispatch)=>{
+
+    axios.patch(`http://localhost:1080/city/${id}`,payload)
+   .then((res)=>{console.log(res.data);get_city_api()})
+   .catch((err)=>{console.log(err)})
 
 
-}
+
+  }
+
+  export const delete_the_city=(id)=>(dispatch)=>{
+
+    axios.delete(`http://localhost:1080/city/${id}`)
+   .then((res)=>{console.log(res.data);get_city_api()})
+   .catch((err)=>{console.log(err)})
+
+
+
+  }
+

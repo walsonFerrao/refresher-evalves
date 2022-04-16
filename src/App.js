@@ -4,6 +4,7 @@ import { Cityform } from './Components/Cityform';
 import { Countryform } from './Components/Countryform';
 import {Routes,Route} from 'react-router-dom'
 import { Home } from "./Components/Home"
+import {Editingsection} from './Components/Editingsection'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 
 <Route path='/cityform' element={<Cityform/>}/>
 <Route path='/countryform' element={<Countryform/>}/>
+<Route path='/edit/:id' element={<Editingsection/>}/>
 
 
       </Routes>

@@ -1,10 +1,8 @@
-import { useState } from "react"
-import { useDispatch } from "react-redux"
-import {add_city_api} from '../Redux/City/action'
 import styled from 'styled-components'
-import { useNavigate } from "react-router"
-
-
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate, useParams } from 'react-router';
+import {patch_the_city} from '../Redux/City/action'
 
 export const Wrapper=styled.div`
 
@@ -19,7 +17,9 @@ padding-top:50px;
 line-height:60px;
 margin-top:100px;
 border-radius:5px;
-box-shadow: rgba(82, 57, 73, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+box-shadow: 30px 25px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 30px 25px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 30px 25px 5px 0px rgba(0,0,0,0.75);
 
 `
 export const Input=styled.input`
@@ -38,32 +38,41 @@ font-weight:bold;
 
 
 
+export const Editingsection=()=>{
 
-
-
-export const Cityform=()=>{
+    const dispatch=useDispatch()
     const navigate=useNavigate()
-const dispacth=useDispatch()
 const [country,setcountry]=useState("")
 const [city,setcity]=useState("")
 const [population,setpopulation]=useState("")
+const {id} =useParams()
+
+console.log(id,"id")
 
 
- function add_it()
- {
 
-dispacth(add_city_api({country,city,population})) 
+function makechanges()
+{
+let payload={
+    country,
+    city,
+    population
+}
+
+dispatch(patch_the_city({id,payload}))
+
 navigate("/")
 
 
-
- }
-
+}
 
 
-return (
 
-<>
+
+return(
+
+
+
 <Wrapper>
 <Input type="text" placeholder="country" onChange={(e)=>{setcountry(e.target.value)}}/>
 <br />
@@ -73,17 +82,16 @@ return (
 <br />
 
 
-<Button onClick={add_it} disabled={!country||!city||!population}>addcity</Button>
+<Button onClick={makechanges}>EditCity</Button>
 </Wrapper>
 
-
-</>
 
 
 
 
 
 )
+
 
 
 

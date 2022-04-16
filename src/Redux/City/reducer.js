@@ -23,7 +23,7 @@ switch (type) {
      case SORT_POPULATION_DESCENDING:
         return{...store,city:[...store.city.sort((a,b)=>(b.population-a.population))]}
 case FILTER_BY_COUNTRY:
-    return {...store,city:[...store.city.filter((ele)=>ele.country==payload)]}
+    return {...store,city:[...store.city.filter((ele)=>{return ele.country==payload})]}
 
     default:
        return store
