@@ -1,0 +1,17 @@
+{
+  "country": [],
+  "city": [
+    {
+      "country": "india",
+      "city": "mangalore",
+      "population": "185555",
+      "id": 1
+    },
+    {
+      "country": "nepal",
+      "city": "lop",
+      "population": "5494",
+      "id": 2
+    }
+  ]
+}
