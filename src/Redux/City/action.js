@@ -28,7 +28,7 @@ export const filter_by_country=(payload)=>({type:FILTER_BY_COUNTRY,payload})
 export const add_city_api=(payload)=>(dispatch)=>{
 
     axios.post("http://localhost:1080/city",payload)
-    .then((res)=>{console.log(res.data)})
+    .then((res)=>{console.log(res.data);get_city_api()})
     .catch((err)=>{console.logh(err)})
 
 

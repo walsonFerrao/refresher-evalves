@@ -11,14 +11,42 @@
     {
       "country": "italy",
       "id": 3
+    },
+    {
+      "country": "newzealand",
+      "id": 4
     }
   ],
   "city": [
     {
-      "country": "india",
-      "city": "dehli",
-      "population": "6546464",
+      "country": "Pakistan",
+      "city": "Lahore",
+      "population": "546464",
       "id": 1
+    },
+    {
+      "country": "India",
+      "city": "Bangalore",
+      "population": "5454",
+      "id": 2
+    },
+    {
+      "country": "Germany",
+      "city": "Shurz",
+      "population": "46464649",
+      "id": 3
+    },
+    {
+      "country": "Ukraine",
+      "city": "Kiev",
+      "population": "84896",
+      "id": 4
+    },
+    {
+      "country": "Australia",
+      "city": "Melbourne",
+      "population": "76464",
+      "id": 5
     }
   ]
 }
