@@ -7,7 +7,18 @@
     {
       "country": "Pakistan",
       "id": 2
+    },
+    {
+      "country": "italy",
+      "id": 3
     }
   ],
-  "city": []
+  "city": [
+    {
+      "country": "india",
+      "city": "dehli",
+      "population": "6546464",
+      "id": 1
+    }
+  ]
 }
